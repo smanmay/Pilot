@@ -1,0 +1,13 @@
+/target/
+.project
+.settings
+.classpath
+.DS_Store
+*target
+*build
+/derby.log
+/metastore_db
+/bin/
+/log/
+/*.hprof
+/java_dump/
