@@ -13,18 +13,14 @@
 	<url>http://maven.apache.org</url>
 
 	<repositories>
-		<!--<repository> <id>exeqmode</id> <name>exeqmode</name> <url>file://libs</url> 
-			</repository> -->
 		<repository>
-			<id>cloudera</id>
-			<url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
+			<id>exeqmode</id>
+			<name>exeqmode</name>
+			<url>file://libs</url>
 		</repository>
+		<!-- <repository> <id>cloudera</id> <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url> 
+			<releases> <enabled>true</enabled> </releases> <snapshots> <enabled>false</enabled> 
+			</snapshots> </repository> -->
 
 		<!-- <repository> <releases> <enabled>true</enabled> </releases> <snapshots> 
 			<enabled>true</enabled> </snapshots> <id>hortonworks.extrepo</id> <name>Hortonworks 
@@ -35,9 +31,9 @@
 			</repository> -->
 	</repositories>
 	<properties>
-		<hadoop.version>2.6.0-cdh5.16.2</hadoop.version>
-		<spark.version>2.3.0.cloudera4</spark.version>
-		<livy.version>0.6.0-incubating</livy.version>
+		<hadoop.version>2.7.7</hadoop.version>
+		<spark.version>3.1.1</spark.version>
+		<livy.version>0.7.1-incubating</livy.version>
 		<junit.version>3.8.1</junit.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -45,27 +41,27 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.spark</groupId>
-			<artifactId>spark-core_2.11</artifactId>
+			<artifactId>spark-core_2.12</artifactId>
 			<version>${spark.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.spark</groupId>
-			<artifactId>spark-mllib_2.11</artifactId>
+			<artifactId>spark-mllib_2.12</artifactId>
 			<version>${spark.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.spark</groupId>
-			<artifactId>spark-sql_2.11</artifactId>
+			<artifactId>spark-sql_2.12</artifactId>
 			<version>${spark.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.spark</groupId>
-			<artifactId>spark-hive_2.11</artifactId>
+			<artifactId>spark-hive_2.12</artifactId>
 			<version>${spark.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.spark</groupId>
-			<artifactId>spark-yarn_2.11</artifactId>
+			<artifactId>spark-yarn_2.12</artifactId>
 			<version>${spark.version}</version>
 		</dependency>
 		<dependency>
@@ -91,11 +87,6 @@
 		<dependency>
 			<groupId>org.apache.hadoop</groupId>
 			<artifactId>hadoop-azure</artifactId>
-			<version>${hadoop.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.hadoop</groupId>
-			<artifactId>hadoop-azure-datalake</artifactId>
 			<version>${hadoop.version}</version>
 		</dependency>
 		<dependency>

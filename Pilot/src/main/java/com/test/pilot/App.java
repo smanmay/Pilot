@@ -53,7 +53,7 @@ public class App {
 			int samples = 5;
 			client.uploadJar(new File("pilot-0.0.1.jar")).get();
 			
-			logger.debug(String.format("Running PiJob with %d samples...\n", samples));
+			logger.debug(String.format("Running PiJob with %d samples...", samples));
 			double pi = client.submit(new PiJob(samples)).get();
 			
 			logger.debug("Pi is roughly: " + pi);
